@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Flashing effect for the wrong page */
+.flash {
+  animation: flash 0.5s infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    background-color: red;
+    color: white;
+  }
+  100% {
+    background-color: white;
+    color: red;
+  }
+}
+
+.right {
+  animation: flash 0.5s infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    background-color: royalblue;
+    color: white;
+  }
+  100% {
+    background-color: white;
+    color: red;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
