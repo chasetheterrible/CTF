@@ -9,10 +9,10 @@ body {
 
 /* Flashing effect for the wrong page */
 .flash {
-  animation: flash 0.5s infinite alternate;
+  animation: flash-wrong 0.5s infinite alternate;
 }
 
-@keyframes flash {
+@keyframes flash-wrong {
   0% {
     background-color: red;
     color: white;
@@ -24,10 +24,10 @@ body {
 }
 
 .right {
-  animation: flash 0.5s infinite alternate;
+  animation: flash-right 0.5s infinite alternate;
 }
 
-@keyframes flash {
+@keyframes flash-right {
   0% {
     background-color: royalblue;
     color: white;
@@ -43,5 +43,6 @@ h1 {
 }
 
 .hidden {
-  visibility: hidden;
+  visibility: hidden !important; /* Ensures it cannot be overridden */
+  pointer-events: none; /* Prevents hover and clicks */
 }
